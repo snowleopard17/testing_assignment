@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.grid.label }}<br>
+            {{ form.grid(size=50) }}<br>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    {% if time is not none %}
+    <p id="Solution">Time: {{ time }}</p>
+    {% endif %}
+</body>
+</html>
